@@ -52,6 +52,7 @@ Exemplo de configuração da interrupção:
 
 ```C
 #define Pulser1_A GPIO_NUM_35
+#define intr_alloc_flags 0
 
 typedef struct
 {
