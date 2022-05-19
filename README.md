@@ -53,6 +53,11 @@ Exemplo de configuração da interrupção:
 ```C
 #define Pulser1_A GPIO_NUM_35
 
+typedef struct
+{
+    bool isr_gpio_level;
+} odo_isr_struct_t;
+
 void gpio_config()
 {
     gpio_config_t io_conf; 
