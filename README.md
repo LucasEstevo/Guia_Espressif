@@ -405,8 +405,36 @@ void coletar_dados()
 
 [Código de Exemplo]()
 
+## Conversão (int -> char)
+Para isto utilize a função ``atoi``
+```C
+#include "stdlib.h"
+char texto[10] = "1234";
+int inteiro = atoi(texto);
+```
 
 
 
+## Conversão (char -> int)
+Para isto utilize a função ``itoa``
+```C
+#include "stdlib.h"
+int inteiro = 1234;
+char texto[10] = itoa(inteiro);
+```
 
+
+
+## ESP-IDF Menu Config
+**log output** <br/>
+``warning`` não irá printar informações do sistema do esp <br/>
+``debug`` irá printar todas as informações do sistema esp <br/>
+``info`` vai printar informações basicas de inicio e aceitar os ESP_LOG <br/>
+
+**Common ESP-related** <br/>
+* **channel for console output**
+  * default UART0 ->
+  * none -> Não irá realizar nenhum print de informações na UART que sejam advindos de ESP_LOG,printf e até mesmo as mensagens de erros do próprio ESP.<br/>
+
+Portando utilize o ``none`` somente quando usar a UART para configuração do equipamento, para evitar a geração de mensagens que possam afetar a configuração e o debuging.
 
